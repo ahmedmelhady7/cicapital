@@ -1,0 +1,163 @@
+body {
+}
+
+.jumbotron {
+	background-color: #4063ae;
+	margin-top: 150px !important;
+	color: white;
+	padding-bottom: 70px;
+	width: 1070px;
+}
+
+input {
+	color:#000000;
+}
+
+.jumbotron h1 {
+	font-size: 38px;
+}
+
+.logo {
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	width: 30%;
+	height: 120px;
+}
+
+.slogan p {
+	font-size: 24px;
+	margin-bottom: 0px;
+	color: #4063ae;
+}
+.slogan h1 {
+	margin-top: 0px;
+}
+.slogan {
+	color: #0854a2;
+	margin-top: 15px;
+}
+.inputText {
+	display: inline;
+}
+
+.fname {
+	width: 200px;
+	margin-left: 27px;
+}
+.lname {
+	width: 400px;
+	margin-left: 15px;
+}
+
+.bdgname {
+	width:788px;
+	margin-left: 14px;
+}
+
+.positionname {
+	width:788px;
+	margin-left: 45px;
+}
+
+.companyname {
+	width:788px;
+	margin-left: 37px;
+}
+.emailname {
+	width:788px;
+	margin-left: 63px;
+}
+.phone {
+	width:175px;
+	margin-left: 15px;
+}
+
+.required-message {
+	color: #EE0101;
+	display: none;
+}
+
+table, th, td {
+	border-collapse: collapse;
+	border: 0px solid black;
+}
+th, td {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+.radios {
+	margin-left: 25px !important;
+}
+
+.payment {
+	margin-left: 50px !important;
+}
+.creditcard {
+	margin-left: 100px !important;	
+}
+.creditcards {
+	margin-left: 25px !important;
+}
+.creditcards2 {
+	padding-left: 370px !important;
+}
+.pay th, td{
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+.creditcardname1 {
+	width: 300px !important;
+	margin-left: 80px;
+}
+.creditcardname2 {
+	width: 300px !important;
+	margin-left: 10px;
+}
+.creditcardname3 {
+	width: 300px !important;
+	margin-left: 30px;
+}
+.grayTable {
+	background-color: #d9e0ef;
+	opacity: 0.8;
+	color: #0854a2;
+	border-collapse: collapse;
+	border: 0px solid black;
+	width: 960px;
+	padding: 20px;
+}
+
+.grayTable th, td {
+	padding-top:0px;
+	padding-left: 25px;
+}
+
+.smoke {
+	margin-left: 30px !important;
+}
+
+.other {
+	margin-left: 105px !important;
+}
+.page2 {
+	font-size: 16px;
+	border-collapse: collapse;
+	border: 0px solid black;
+}
+.page2 th, td {
+	padding-bottom: 0px;
+	padding-top: 0px;	
+}
+
+.page2 h2 {
+	font-size: 16px;
+}
+
+.grayTable h2 {
+	font-size: 20px;
+}
+.grayTable input {
+	background-color: white;
+}
