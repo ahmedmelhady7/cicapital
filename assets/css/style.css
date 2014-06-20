@@ -103,9 +103,14 @@ th, td {
 }
 
 .radios {
-	margin-left: 25px !important;
+	margin-left: 80px !important;
 }
-
+.oneonone {
+	margin-left: 40px !important;
+}
+.normal {
+	margin-left: 80px !important;
+}
 .payment {
 	margin-left: 50px !important;
 }
