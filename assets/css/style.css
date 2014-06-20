@@ -42,11 +42,11 @@ input {
 }
 
 .fname {
-	width: 200px;
+	width: 175px;
 	margin-left: 48px;
 }
 .lname {
-	width: 407px;
+	width: 430px;
 	margin-left: 15px;
 }
 
@@ -62,7 +62,7 @@ input {
 
 .companyname {
 	width:788px;
-	margin-left: 57px;
+	margin-left: 56px;
 }
 .emailname {
 	width:788px;
@@ -74,7 +74,11 @@ input {
 }
 .mobile {
 	width:175px;
-	margin-left:35px;
+	margin-left:43px;
+}
+.city {
+	width:175px;
+	margin-left:60px;
 }
 .street {
 	width:175px;
