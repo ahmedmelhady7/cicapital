@@ -1,4 +1,5 @@
 body {
+	font-weight: 300;
 }
 
 .jumbotron {
@@ -42,36 +43,47 @@ input {
 
 .fname {
 	width: 200px;
-	margin-left: 27px;
+	margin-left: 48px;
 }
 .lname {
-	width: 400px;
+	width: 407px;
 	margin-left: 15px;
 }
 
 .bdgname {
 	width:788px;
-	margin-left: 14px;
+	margin-left: 35px;
 }
 
 .positionname {
 	width:788px;
-	margin-left: 45px;
+	margin-left: 65px;
 }
 
 .companyname {
 	width:788px;
-	margin-left: 37px;
+	margin-left: 57px;
 }
 .emailname {
 	width:788px;
-	margin-left: 63px;
+	margin-left: 83px;
 }
 .phone {
 	width:175px;
-	margin-left: 30px;
+	margin-left: 52px;
 }
-
+.mobile {
+	width:175px;
+	margin-left:35px;
+}
+.street {
+	width:175px;
+	margin-left:81px;
+}
+.Hotel-prefernces {
+	width: 175px;
+	margin-left: 17px;
+}
 .required-message {
 	color: #EE0101;
 	display: none;
@@ -86,6 +98,9 @@ th, td {
 	padding-bottom: 15px;
 }
 
+.table-input label {
+	font-weight: 200;
+}
 
 .radios {
 	margin-left: 25px !important;
@@ -150,7 +165,9 @@ th, td {
 	padding-bottom: 0px;
 	padding-top: 0px;	
 }
-
+.page2 label {
+	font-weight: 200;
+}
 .page2 h2 {
 	font-size: 16px;
 }
