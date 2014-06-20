@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://designasreligion.com/spline/hongkong.html -->
+<html lang="en-US">
+	<head>
+		<title>Fill Form</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<script type="text/javascript">
+			/**
+			 * @license
+			 *! H5F
+			 * https://github.com/ryanseddon/H5F/
+			 * Copyright (c) Ryan Seddon | Licensed MIT
+			 */
+
+			(function(e, t) {
+				"function" == typeof define && define.amd ? define(t) : e.H5F = t()
+			})(this, function() {
+				var e, t, a, i, n, r, s, l, u, o, c, d, v, f, p, m, h, g, b, y, w, C, N, A, E, $, k = document, x = k.createElement("input"), q = /^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, M = /[a-z][\-\.+a-z]*:\/\//i, L = /^(input|select|textarea)$/i;
+				return r = function(e, t) {
+					var a = !e.nodeType || !1, i = {
+						validClass : "valid",
+						invalidClass : "error",
+						requiredClass : "required",
+						placeholderClass : "placeholder"
+					};
+					if ("object" == typeof t)
+						for (var r in i)t[r] ===
+						void 0 && (t[r] = i[r]);
+					if ( n = t || i, a)
+						for (var l = 0, u = e.length; u > l; l++)
+							s(e[l]);
+					else
+						s(e)
+				}, s = function(a) {
+					var i, n = a.elements, r = n.length, s = !!a.attributes.novalidate;
+					if (b(a, "invalid", u, !0), b(a, "blur", u, !0), b(a, "input", u, !0), b(a, "keyup", u, !0), b(a, "focus", u, !0), b(a, "change", u, !0), b(a, "click", o, !0), b(a, "submit", function(i) {
+							e = !0, t || s || a.checkValidity() || w(i)
+						}, !1), !v())
+						for (a.checkValidity = function() {
+							return c(a)
+						}; r--; )
+							i = !!n[r].attributes.required, "fieldset" !== n[r].nodeName.toLowerCase() && l(n[r])
+				}, l = function(e) {
+					var t = e, a = g(t), n = {
+						type : t.getAttribute("type"),
+						pattern : t.getAttribute("pattern"),
+						placeholder : t.getAttribute("placeholder")
+					}, r = /^(email|url)$/i, s = /^(input|keyup)$/i, l = r.test(n.type) ? n.type : n.pattern ? n.pattern : !1, u = f(t, l), o = m(t, "step"), v = m(t, "min"), h = m(t, "max"), b = !("" === t.validationMessage ||
+					void 0 === t.validationMessage);
+					t.checkValidity = function() {
+						return c.call(this, t)
+					}, t.setCustomValidity = function(e) {
+						d.call(t, e)
+					}, t.validity = {
+						valueMissing : a,
+						patternMismatch : u,
+						rangeUnderflow : v,
+						rangeOverflow : h,
+						stepMismatch : o,
+						customError : b,
+						valid : !(a || u || o || v || h || b)
+					}, n.placeholder && !s.test(i) && p(t)
+				}, u = function(e) {
+					var t = C(e) || e, a = /^(input|keyup|focusin|focus|change)$/i, r = /^(submit|image|button|reset)$/i, s = /^(checkbox|radio)$/i, o = !0;
+					!L.test(t.nodeName) || r.test(t.type) || r.test(t.nodeName) || ( i = e.type, v() || l(t), t.validity.valid && ("" !== t.value || s.test(t.type)) || t.value !== t.getAttribute("placeholder") && t.validity.valid ? (A(t, [n.invalidClass, n.requiredClass]), N(t, n.validClass)) : a.test(i) ? t.validity.valueMissing && A(t, [n.requiredClass, n.invalidClass, n.validClass]) : t.validity.valueMissing ? (A(t, [n.invalidClass, n.validClass]), N(t, n.requiredClass)) : t.validity.valid || (A(t, [n.validClass, n.requiredClass]), N(t, n.invalidClass)), "input" === i && o && (y(t.form, "keyup", u, !0), o = !1))
+				}, c = function(t) {
+					var a, i, n, r, s = !1;
+					if ("form" === t.nodeName.toLowerCase()) {
+						a = t.elements;
+						for (var l = 0, o = a.length; o > l; l++)
+							i = a[l], n = !!i.attributes.required, r = !!i.attributes.pattern, "fieldset" !== i.nodeName.toLowerCase() && (n || r && n) && (u(i), i.validity.valid || s || (e && i.focus(), s = !0));
+						return !s
+					}
+					return u(t), t.validity.valid
+				}, d = function(e) {
+					var t = this;
+					t.validationMessage = e
+				}, o = function(e) {
+					var a = C(e);
+					a.attributes.formnovalidate && "submit" === a.type && ( t = !0)
+				}, v = function() {
+					return E(x, "validity") && E(x, "checkValidity")
+				}, f = function(e, t) {
+					if ("email" === t)
+						return !q.test(e.value);
+					if ("url" === t)
+						return !M.test(e.value);
+					if (t) {
+						var i = e.getAttribute("placeholder"), n = e.value;
+						return a = RegExp("^(?:" + t + ")$"), n === i ? !1 : "" === n ? !1 : !a.test(e.value)
+					}
+					return !1
+				}, p = function(e) {
+					var t = {
+						placeholder : e.getAttribute("placeholder")
+					}, a = /^(focus|focusin|submit)$/i, r = /^(input|textarea)$/i, s = /^password$/i, l = !!("placeholder" in x);
+					l || !r.test(e.nodeName) || s.test(e.type) || ("" !== e.value || a.test(i) ? e.value === t.placeholder && a.test(i) && (e.value = "", A(e, n.placeholderClass)) : (e.value = t.placeholder, b(e.form, "submit", function() {
+						i = "submit", p(e)
+					}, !0), N(e, n.placeholderClass)))
+				}, m = function(e, t) {
+					var a = parseInt(e.getAttribute("min"), 10) || 0, i = parseInt(e.getAttribute("max"), 10) || !1, n = parseInt(e.getAttribute("step"), 10) || 1, r = parseInt(e.value, 10), s = (r - a) % n;
+					return g(e) || isNaN(r) ? "number" === e.getAttribute("type") ? !0 : !1 : "step" === t ? e.getAttribute("step") ? 0 !== s : !1 : "min" === t ? e.getAttribute("min") ? a > r : !1 : "max" === t ? e.getAttribute("max") ? r > i : !1 :
+					void 0
+				}, h = function(e) {
+					var t = !!e.attributes.required;
+					return t ? g(e) : !1
+				}, g = function(e) {
+					var t = e.getAttribute("placeholder"), a = /^(checkbox|radio)$/i, i = !!e.attributes.required;
+					return !(!i || "" !== e.value && e.value !== t && (!a.test(e.type) || $(e)))
+				}, b = function(e, t, a, i) {
+					E(window, "addEventListener") ? e.addEventListener(t, a, i) : E(window, "attachEvent") && window.event !==
+					void 0 && ("blur" === t ? t = "focusout" : "focus" === t && ( t = "focusin"), e.attachEvent("on" + t, a))
+				}, y = function(e, t, a, i) {
+					E(window, "removeEventListener") ? e.removeEventListener(t, a, i) : E(window, "detachEvent") && window.event !==
+					void 0 && e.detachEvent("on" + t, a)
+				}, w = function(e) {
+					e = e || window.event, e.stopPropagation && e.preventDefault ? (e.stopPropagation(), e.preventDefault()) : (e.cancelBubble = !0, e.returnValue = !1)
+				}, C = function(e) {
+					return e = e || window.event, e.target || e.srcElement
+				}, N = function(e, t) {
+					var a;
+					e.className ? ( a = RegExp("(^|\\s)" + t + "(\\s|$)"), a.test(e.className) || (e.className += " " + t)) : e.className = t
+				}, A = function(e, t) {
+					var a, i, n = "object" == typeof t ? t.length : 1, r = n;
+					if (e.className)
+						if (e.className === t)
+							e.className = "";
+						else
+							for (; n--; )
+								a = RegExp("(^|\\s)" + (r > 1 ? t[n] : t) + "(\\s|$)"), i = e.className.match(a), i && 3 === i.length && (e.className = e.className.replace(a, i[1] && i[2] ? " " : ""))
+				}, E = function(e, t) {
+					var a = typeof e[t], i = RegExp("^function|object$", "i");
+					return !!(i.test(a) && e[t] || "unknown" === a)
+				}, $ = function(e) {
+					for (var t = document.getElementsByName(e.name), a = 0; t.length > a; a++)
+						if (t[a].checked)
+							return !0;
+					return !1
+				}, {
+					setup : r
+				}
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="header">
+				<div class="slogan pull-left">
+					<p>
+						CI Capital
+					</p>
+					<h1>Egypt Confrence 2014</h1>
+				</div>
+				<div class="logo pull-right"></div>
+			</div>
+			<div class="jumbotron">
+				<h1>Companies Registeration Form</h1>
+				<form action="https://docs.google.com/forms/d/12o8zPntjwHz2pCwR9buqiHAR4v9c65K3Fk-reoOEfFQ/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+					<fieldset>
+						<table class="table-input" style="width:1150px">
+							<tr>
+								<td colspan="12"><label>Prefix *:</label>
+								<input type="radio" name="entry.1180736260" value="Dr." id="group_1180736260_1" role="radio" class="radios ss-q-radio" aria-label="Dr." required="" aria-required="true">
+								</span><label for="">Dr.</label>
+								<input type="radio" name="entry.1180736260" value="Mr." id="group_1180736260_2" role="radio" class="radios ss-q-radio" aria-label="Mr." required="" aria-required="true">
+								</span><label for="two">Mr.</label>
+								<input type="radio" name="entry.1180736260" value="Mrs." id="group_1180736260_3" role="radio" class="radios ss-q-radio" aria-label="Mrs." required="" aria-required="true">
+								</span><label for="two">Mrs.</label>
+								<input type="radio" name="entry.1180736260" value="Ms." id="group_1180736260_4" role="radio" class="radios ss-q-radio" aria-label="Ms." required="" aria-required="true">
+								</span><label for="two">Ms.</label>
+								<div class="required-message">
+									This is a required question
+								</div></td>
+							</tr>
+							<tr>
+								<td width="10%"><!-- Text input-->
+								<div class="control-group">
+									<label class="control-label" for="textinput">First Name *:</label>
+									<div class="inputText controls">
+										<input type="text" name="entry.2057639810" value="" class="fname input-xxlarge ss-q-short" id="entry_2057639810" dir="auto" aria-label="First Name  " aria-required="true" required="" title="">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+								<td>
+								<div class="control-group">
+									<label class="control-label" for="textinput">Last Name *:</label>
+									<div class="inputText controls">
+										<input type="text" name="entry.61810658" value="" class="lname input-xlarge ss-q-short" id="entry_61810658" dir="auto" aria-label="Last Name  " aria-required="true" required="" title="">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td colspan="12">
+								<div class="control-group">
+									<label class="control-label" for="textinput">Badge Name *:</label>
+									<div class="inputText controls">
+										<input type="text" name="entry.492588535" value="" class="input-xlarge bdgname ss-q-short" id="entry_492588535" dir="auto" aria-label="Badge Name  " aria-required="true" required="" title="">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+							</tr>
+							<tr>
+								<td colspan="12">
+								<div class="control-group">
+									<label class="control-label" for="textinput">Position *:</label>
+									<div class="inputText controls">
+										<input type="text" name="entry.1268464682" value="" class="input-xlarge positionname ss-q-short" id="entry_1268464682" dir="auto" aria-label="Title  " aria-required="true" required="" title="">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+							</tr>
+							<tr>
+								<td colspan="12">
+								<div class="control-group">
+									<label class="control-label" for="textinput">Company *:</label>
+									<div class="inputText controls">
+										<input type="text" name="entry.1484060336" value="" class="input-xlarge companyname ss-q-short" id="entry_1484060336" dir="auto" aria-label="Company  " aria-required="true" required="" title="">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+							</tr>
+							<tr>
+								<td colspan="12">
+								<div class="control-group">
+									<label class="control-label" for="textinput">Email *:</label>
+									<div class="inputText controls">
+										<input type="email" name="entry.1667527146" value="" class="emailname input-xlarge ss-q-short" id="entry_1667527146" dir="auto" aria-label="E-mail  Enter Valid Email Address" aria-required="true" required="" title="Enter Valid Email Address">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+							</tr>
+							<tr>
+								<td><!-- Text input-->
+								<div class="control-group">
+									<label class="control-label" for="textinput">Telephone *:</label>
+									<div class="inputText controls">
+										<input type="text" name="entry.1864740987" value="" class="phone input-xlarge ss-q-short" id="entry_1864740987" dir="auto" aria-label="Telephone  " title="">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+								<td width="30%" colspan="2"><!-- Text input-->
+								<div class="control-group">
+									<label class="control-label" for="textinput">Mobile *:</label>
+									<div class="inputText controls">
+										<input type="text" name="entry.2112899860" value="" class="phone input-xlarge ss-q-short" id="entry_2112899860" dir="auto" aria-label="Mobile  " title="">
+										<div class="required-message">
+											This is a required question
+										</div>
+									</div>
+								</div></td>
+							</tr>
+
+						</table>
+						<table class="grayTable">
+							<tr>
+								<td colspan="8"><h2>Hotel and Accommodation Details:
+								<br />
+								Claridge's, 49 Brook Street, Mayfair, London, W1K 4HR, United Kingdom</h2></td>
+							</tr>
+							<tr>
+								<td width="40%">
+								<input type="radio" id="one" name="first_item" value="1" />
+								<label for="">Deluxe Room: &pound;345 per night</label></td>
+								<td>
+								<input type="radio" id="one" name="first_item" value="2" />
+								<label for="">Superior Room: &pound;285 per night</label></td>
+							</tr>
+							<tr>
+								<td width="30%"><label for="">Check in on: </label>
+								<input type="text" id="one" name="first_item" value="1" />
+								</td>
+								<td><label for="">Check out on: </label>
+								<input type="text" id="one" name="first_item" value="1" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="8"> do not include breakfast and VAT, check in is at 15:00 and check out is at 12:00 noon.
+								<br />
+								Availability will be on first-come-first-serve basis</td>
+							</tr>
+							<tr>
+								<td colspan="2"><label for="">Number of occupants per room: </label>
+								<input type="number" id="one" name="first_item" class="input-small" />
+								<input type="radio" id="one" name="first_item" class="smoke" />
+								<label for="">smoking</label>
+								<input type="radio" id="one" name="first_item" class="smoke"/>
+								<label for="">non smoking</label></td>
+							</tr>
+							<tr>
+								<td colspan="2"><label for="">Food Diet: </label>
+								<input type="radio" id="one" name="first_item" class="smoke" />
+								<label for="">Vegetarian</label>
+								<input type="radio" id="one" name="first_item" class="smoke"/>
+								<label for="">non-vegetarian</label></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<input type="radio" id="one" name="first_item" class="other" />
+								<label for="">Other (please specify):</label>
+								<input type="text" />
+								</td>
+							</tr>
+						</table>
+						<br />
+						<table class="grayTable">
+							<tr>
+								<td colspan="8"><h2>Hotel and Accommodation Details:
+								<br />
+								Four Seasons Hotel, 57 East 57th Street, New York, NY 10022, United States</h2></td>
+							</tr>
+							<tr>
+								<td colspan="8"> We have upgraded the guests' accomodation from Superior to Deluxe with the below CI Capital special rates</td>
+							</tr>
+							<tr>
+								<td width="40%">
+								<input type="radio" id="one" name="first_item" value="1" />
+								<label for="">Deluxe Room: &pound;485 per night</label></td>
+								<td>
+							</tr>
+							<tr>
+								<td width="30%"><label for="">Check in on: </label>
+								<input type="text" id="one" name="first_item" value="1" />
+								</td>
+								<td><label for="">Check out on: </label>
+								<input type="text" id="one" name="first_item" value="1" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="8"> Prices exclude 14.75% taxes plus $2.00 per room, per night and $1.50 per night Javtis Center fee. Check in is at 15:00
+								and checkout is at 12:00 noon. Availability will be on first-come-first-serve basis.</td>
+							</tr>
+							<tr>
+								<td colspan="2"><label for="">Number of occupants per room: </label>
+								<input type="number" id="one" name="first_item" class="input-small" />
+								<input type="radio" id="one" name="first_item" class="smoke" />
+								<label for="">smoking</label>
+								<input type="radio" id="one" name="first_item" class="smoke"/>
+								<label for="">non smoking</label></td>
+							</tr>
+							<tr>
+								<td colspan="2"><label for="">Food Diet: </label>
+								<input type="radio" id="one" name="first_item" class="smoke" />
+								<label for="">Vegetarian</label>
+								<input type="radio" id="one" name="first_item" class="smoke"/>
+								<label for="">non-vegetarian</label></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<input type="radio" id="one" name="first_item" class="other" />
+								<label for="">Other (please specify):</label>
+								<input type="text" />
+								</td>
+							</tr>
+						</table>
+						<br />
+						<table class="grayTable pay">
+							<tr>
+								<td width="60%"><label for="">Payment Method: </label>
+								<input type="radio" id="one" name="first_item" class="payment" />
+								<label for="">Cash</label>
+								<input type="radio" id="one" name="first_item" class="creditcard"/>
+								<label for="">Credit Card</label></td>
+							</tr>
+							<tr>
+								<td class="creditcards2"><label for="">Type</label>
+								<input type="radio" id="one" name="first_item" class="creditcards" />
+								<label for="">Amex</label>
+								<input type="radio" id="one" name="first_item" class="creditcards"/>
+								<label for="">Master Card</label>
+								<input type="radio" id="one" name="first_item" class="creditcards"/>
+								<label for="">Visa</label></td>
+							</tr>
+							<tr>
+								<td class="creditcards2"><label for="">Number</label>
+								<input type="text" id="one" name="first_item" class="creditcardname1 input-xxlarge" />
+								</td>
+							</tr>
+							<tr>
+								<td class="creditcards2"><label for="">Card Holder Name</label>
+								<input type="text" id="one" name="first_item" class="creditcardname2 input-xxlarge" />
+								</td>
+							</tr>
+							<tr>
+								<td class="creditcards2"><label for="">Expiration Date</label>
+								<input type="text" id="one" name="first_item" class="creditcardname3 input-xxlarge" />
+								</td>
+							</tr>
+						</table>
+						<br />
+						<!-- page 2 table -->
+						<table class="page2">
+							<tr>
+								<td><h1>Meeting Request Form</h1></td>
+							</tr>
+							<tr>
+								<td colspan="8"><h2>If you wish to meet companies attending the Conference on a one to one basis, please specify</h2></td>
+							</tr>
+							<tr>
+								<td><b>Banks & Financial Institutions</b></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Citadel Capital </label>
+									</div>
+								</div></td>
+								<td>
+								<label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label>
+								</td>
+							</tr>
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Commercial International Bank </label>
+									</div>
+								</div></td>
+								<td>
+								<label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label>
+								</td>
+							</tr>
+							<tr>
+								<td><b>Industrials</b></td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td><div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Centamin </label>
+									</div>
+								</div>
+								</td>
+								<td>
+									<label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label>
+								</td>
+							</tr>
+	
+							<tr>
+								<td><div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Circle Oil </label>
+									</div>
+								</div>
+								</td>
+								<td>
+									<label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label>
+								</td>
+							</tr>
+							
+							<tr>
+								<td><div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Ezz Steel </label>
+									</div>
+								</div>
+								</td>
+								<td>
+									<label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label>
+								</td>
+							</tr>
+							
+							<tr>
+								<td><div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Maridive Oil Services </label>
+									</div>
+								</div>
+								</td>
+								<td>
+									<label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label>
+								</td>
+							</tr>
+							
+							<tr>
+								<td><div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Orascom Construction Industries </label>
+									</div>
+								</div>
+								</td>
+								<td>
+									<label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label>
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<td><b>Chemicals</b></td>
+								<td>
+								</td>
+							</tr>
+								<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Sidi Kerir Petrochemicals </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td><b>Construction & Building Materials</b></td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											El Sewedy Electric </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Lecico Egypt </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Suez Cement </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td><b>Real State</b></td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Amer Group </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Medinat Nasr Housing </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Talaat Moustafa Group Holding </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td><b>Telecoms</b></td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Telecom Egypt </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td><b>Consumer</b></td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Eastern Company </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Ghabbour Auto </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Juhayna Food Industries </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Oriental Weavers </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+							<tr>
+								<td width="50%"><!-- Multiple Checkboxes (inline) -->
+								<div class="control-group">
+									<div class="controls">
+										<label class="checkbox inline" for="checkboxes-0">
+											<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+											Raya Holding </label>
+									</div>
+								</div></td>
+								<td><label for="">Meeting Type</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">One On One</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Small Group</label>
+										<label for="">Meeting Priority</label>
+										<input type="radio" id="one" name="first_item" class="creditcards" />
+										<label for="">High</label>
+										<input type="radio" id="one" name="first_item" class="creditcards"/>
+										<label for="">Normal</label></td>
+							</tr>
+							
+						</table>
+					</fieldset>
+				</form>
+				<p>
+					<a class="btn btn-lg btn-info pull-right" href="#" role="button">Submit</a>
+				</p>
+			</div>
+
+			<div class="footer">
+				<p>
+					&copy; Company 2014
+				</p>
+			</div>
+
+		</div>
+		<!-- /container -->
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/bootstrap-transition.js"></script>
+		<script src="assets/js/bootstrap-alert.js"></script>
+		<script src="assets/js/bootstrap-modal.js"></script>
+		<script src="assets/js/bootstrap-dropdown.js"></script>
+		<script src="assets/js/bootstrap-scrollspy.js"></script>
+		<script src="assets/js/bootstrap-tab.js"></script>
+		<script src="assets/js/bootstrap-tooltip.js"></script>
+		<script src="assets/js/bootstrap-popover.js"></script>
+		<script src="assets/js/bootstrap-button.js"></script>
+		<script src="assets/js/bootstrap-collapse.js"></script>
+		<script src="assets/js/bootstrap-carousel.js"></script>
+		<script src="assets/js/bootstrap-typeahead.js"></script>
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/bootstrap-transition.js"></script>
+		<script src="assets/js/bootstrap-alert.js"></script>
+		<script src="assets/js/bootstrap-modal.js"></script>
+		<script src="assets/js/bootstrap-dropdown.js"></script>
+		<script src="assets/js/bootstrap-scrollspy.js"></script>
+		<script src="assets/js/bootstrap-tab.js"></script>
+		<script src="assets/js/bootstrap-tooltip.js"></script>
+		<script src="assets/js/bootstrap-popover.js"></script>
+		<script src="assets/js/bootstrap-button.js"></script>
+		<script src="assets/js/bootstrap-collapse.js"></script>
+		<script src="assets/js/bootstrap-carousel.js"></script>
+		<script src="assets/js/bootstrap-typeahead.js"></script>
+
+	</body>
+
+</html>
