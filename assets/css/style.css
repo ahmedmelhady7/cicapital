@@ -4,7 +4,7 @@ body {
 
 .jumbotron {
 	background-color: #4063ae;
-	background-image: url(../img/background1.png);
+	/*background-image: url(../img/background1.png);*/
 	margin-top: 150px !important;
 	color: white;
 	padding-bottom: 40px;
