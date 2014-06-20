@@ -6,7 +6,7 @@ body {
 	background-color: #4063ae;
 	margin-top: 150px !important;
 	color: white;
-	padding-bottom: 70px;
+	padding-bottom: 40px;
 	width: 1070px;
 }
 
@@ -45,6 +45,13 @@ input {
 	width: 175px;
 	margin-left: 48px;
 }
+.contacts {
+	font-weight: 300 !important;
+	font-size: 12px !important;
+	margin-top: 100px;
+	margin-bottom: 0px;
+}
+
 .lname {
 	width: 430px;
 	margin-left: 15px;
