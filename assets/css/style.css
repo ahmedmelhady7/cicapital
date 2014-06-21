@@ -213,10 +213,16 @@ input[type=submit], input[type=button], button {
 .hotel-preferences {
 	margin-bottom: 20px;
 }
-.hotel-address {
+.note {
 	margin-top: -10px;
 	font-style: italic;
+	padding-bottom: 10px;
+	font-size:12px;
 }
-.hotel-name {
-	
+.section-title {
+	margin-top: 10px;
+}
+.option-label {
+	font-weight: 500;
+
 }
