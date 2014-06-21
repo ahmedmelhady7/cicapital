@@ -1,5 +1,6 @@
 body {
 	font-weight: 300;
+	padding-top: 30px;
 }
 
 .jumbotron {
@@ -208,4 +209,14 @@ input[type=submit], input[type=button], button {
     color: white;
     font-weight: 500;
     margin-top: 20px;
+}
+.hotel-preferences {
+	margin-bottom: 20px;
+}
+.hotel-address {
+	margin-top: -10px;
+	font-style: italic;
+}
+.hotel-name {
+	
 }
