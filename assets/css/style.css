@@ -226,3 +226,10 @@ input[type=submit], input[type=button], button {
 	font-weight: 500;
 
 }
+.error-element {
+	background-color: red;
+	border-color: red;
+}
+.error-label {
+	color:red;
+}
