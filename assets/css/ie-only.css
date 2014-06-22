@@ -1,27 +1,18 @@
 body {
 	font-weight: 300;
-	padding: 10px 0 0 0;
 }
-.container {
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	width:1070px;
-	margin-right: auto;
-	margin-left: auto;
-}
-.container .jumbotron {
+
+.jumbotron {
 	background-color: #4063ae;
 	/*background-image: url(../img/background1.png);*/
-	margin-top: 12px !important;
+	margin-top: 150px !important;
 	color: white;
 	padding-bottom: 40px;
-	padding-right:20px;
-	padding-left:20px;
 	width: 1070px;
 }
 
 input {
-	color: #000000;
+	color:#000000;
 }
 
 .jumbotron h1 {
@@ -42,7 +33,7 @@ input {
 }
 .slogan h1 {
 	margin-top: 10px;
-	font-size: 30px;
+	font-size:30px;
 }
 .slogan {
 	color: #0854a2;
@@ -69,38 +60,38 @@ input {
 }
 
 .bdgname {
-	width: 788px;
+	width:788px;
 	margin-left: 35px;
 }
 
 .positionname {
-	width: 788px;
+	width:788px;
 	margin-left: 90px;
 }
 
 .companyname {
-	width: 788px;
+	width:788px;
 	margin-left: 56px;
 }
 .emailname {
-	width: 788px;
+	width:788px;
 	margin-left: 83px;
 }
 .phone {
-	width: 175px;
+	width:175px;
 	margin-left: 52px;
 }
 .mobile {
-	width: 175px;
-	margin-left: 43px;
+	width:175px;
+	margin-left:43px;
 }
 .city {
-	width: 175px;
-	margin-left: 60px;
+	width:175px;
+	margin-left:60px;
 }
 .street {
-	width: 175px;
-	margin-left: 81px;
+	width:175px;
+	margin-left:81px;
 }
 .Hotel-prefernces {
 	width: 175px;
@@ -137,7 +128,7 @@ th, td {
 	margin-left: 50px !important;
 }
 .creditcard {
-	margin-left: 100px !important;
+	margin-left: 100px !important;	
 }
 .creditcards {
 	margin-left: 25px !important;
@@ -145,7 +136,7 @@ th, td {
 .creditcards2 {
 	padding-left: 370px !important;
 }
-.pay th, td {
+.pay th, td{
 	padding-top: 5px !important;
 	padding-bottom: 5px !important;
 }
@@ -172,7 +163,7 @@ th, td {
 }
 
 .grayTable th, td {
-	padding-top: 0px;
+	padding-top:0px;
 	padding-left: 25px;
 }
 
@@ -190,7 +181,7 @@ th, td {
 }
 .page2 th, td {
 	padding-bottom: 0px;
-	padding-top: 0px;
+	padding-top: 0px;	
 }
 .page2 label {
 	font-weight: 200;
@@ -207,46 +198,14 @@ th, td {
 }
 
 input[type=submit], input[type=button], button {
-	border: 3px solid #fff;
-	background: #4063ae;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 0px;
-	width: 130px;
-	height: 50px;
-	color: white;
-	font-weight: 500;
-	margin-top: 20px;
-}
-.fnametd {
-	width: 10%;
-}
-.citytd {
-	width: 30%;
-}
-
-.mobiletd {
-	width: 30%;
-}
-.hotel-preferences {
-	margin-bottom: 20px;
-}
-.note {
-	margin-top: -10px;
-	font-style: italic;
-	padding-bottom: 10px;
-	font-size: 12px;
-}
-.section-title {
-	margin-top: 10px;
-}
-.option-label {
-	font-weight: 500;
-}
-.error-element {
-	background-color: red;
-	border-color: red;
-}
-.error-label {
-	color:red;
+    border: 3px solid #fff;
+    background: #4063ae;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 0px;
+    width: 130px;
+    height: 50px;
+    color: white;
+    font-weight: 500;
+    margin-top: 20px;
 }
