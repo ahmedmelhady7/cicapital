@@ -381,11 +381,11 @@
               <tr>
                 <td class="creditcards2"><label  for="">Type</label>
                 <input type="radio" name="entry.784736844" value="Amex" id="group_784736844_1" role="radio" class="creditcards credit-option" aria-label="Amex" required aria-required="true" disabled="disabled">
-                <label  for="group_784736844_1" class="option-label">Amex</label>
+                <label  for="group_784736844_1" class="option-label credit-option">Amex</label>
                 <input type="radio" name="entry.784736844" value="Master Card" id="group_784736844_2" role="radio" class="creditcards credit-option" aria-label="Master Card" required aria-required="true" disabled="disabled">
-                <label  for="group_784736844_2" class="option-label">Master Card</label>
+                <label  for="group_784736844_2" class="option-label credit-option">Master Card</label>
                 <input type="radio" name="entry.784736844" value="Visa" id="group_784736844_3" role="radio" class="creditcards credit-option" aria-label="Visa" required aria-required="true" disabled="disabled">
-                <label  for="group_784736844_3" class="option-label">Visa</label></td>
+                <label  for="group_784736844_3" class="option-label credit-option">Visa</label></td>
               </tr>
               <tr>
                 <td class="creditcards2"><label  for="entry_1581971633">Number</label>
@@ -428,7 +428,7 @@
               <tr>
                 <td>
                   <input type="checkbox" name="entry.1764085803" value="Please handle my transportation booking" id="group_1764085803_1" role="checkbox" class="ss-q-checkbox">
-                  <label  for="group_784736844_3" class="option-label">Please handle my transportation booking</label>
+                  <label  for="group_1764085803_1" class="option-label">Please handle my transportation booking</label>
                 </td>
               </tr>
               <tr>
@@ -568,14 +568,23 @@
 	      },
         submitHandler: function(form) {
 					$("#form-submit").prop('disabled', true);
+          form.submit();
         }
       });
       $("input[name='entry.166141118']").change(function(){
-        
-        $('.other-option').prop('disabled', !$('#group_166141118_3')[0].checked);
+        var isChecked = $('#group_166141118_3')[0].checked
+        $('.other-option').prop('disabled', !isChecked);
+        if(!isChecked) {
+          $('.other-option').removeClass('error-element');
+        }
       }); //other option
+
       $("input[name='entry.585576449']").change(function(){
-        $('.credit-option').prop('disabled', !$("#group_585576449_2")[0].checked);
+        var isChecked = $("#group_585576449_2")[0].checked;
+        $('.credit-option').prop('disabled', !isChecked);
+        if(!isChecked) {
+          $('.credit-option').removeClass('error-element').removeClass('error-label');
+        }
       }); // credit card option
     </script>
   </body>
