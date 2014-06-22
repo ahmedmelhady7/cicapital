@@ -1,14 +1,22 @@
 body {
 	font-weight: 300;
-	padding-top: 30px;
+	padding: 10px 0 0 0;
 }
-
-.jumbotron {
+.container {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width:1070px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.container .jumbotron {
 	background-color: #4063ae;
 	/*background-image: url(../img/background1.png);*/
-	margin-top: 150px !important;
+	margin-top: 12px !important;
 	color: white;
 	padding-bottom: 40px;
+	padding-right:20px;
+	padding-left:20px;
 	width: 1070px;
 }
 
