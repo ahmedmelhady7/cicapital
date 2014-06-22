@@ -365,7 +365,7 @@
                 <td colspan="2">
                 <input type="radio" name="entry.166141118" value="__other_option__" id="group_166141118_3" role="radio" class="other" required="" aria-required="true">
                 <label  for="group_166141118_3" class="option-label">Other (please specify):</label>
-                <input type="text" name="entry.166141118.other_option_response" value="" class="ss-q-other" id="entry_166141118_other_option_response" dir="auto" aria-label="Other">
+                <input type="text" name="entry.166141118.other_option_response" value="" class="ss-q-other other-option" id="entry_166141118_other_option_response" dir="auto" aria-label="Other" disabled="disabled" required="" aria-required="true">
                 </td>
               </tr>
             </table>
@@ -380,41 +380,41 @@
               </tr>
               <tr>
                 <td class="creditcards2"><label  for="">Type</label>
-                <input type="radio" name="entry.784736844" value="Amex" id="group_784736844_1" role="radio" class="creditcards" aria-label="Amex" required aria-required="true">
+                <input type="radio" name="entry.784736844" value="Amex" id="group_784736844_1" role="radio" class="creditcards credit-option" aria-label="Amex" required aria-required="true" disabled="disabled">
                 <label  for="group_784736844_1" class="option-label">Amex</label>
-                <input type="radio" name="entry.784736844" value="Master Card" id="group_784736844_2" role="radio" class="creditcards" aria-label="Master Card" required aria-required="true">
+                <input type="radio" name="entry.784736844" value="Master Card" id="group_784736844_2" role="radio" class="creditcards credit-option" aria-label="Master Card" required aria-required="true" disabled="disabled">
                 <label  for="group_784736844_2" class="option-label">Master Card</label>
-                <input type="radio" name="entry.784736844" value="Visa" id="group_784736844_3" role="radio" class="creditcards" aria-label="Visa" required aria-required="true">
+                <input type="radio" name="entry.784736844" value="Visa" id="group_784736844_3" role="radio" class="creditcards credit-option" aria-label="Visa" required aria-required="true" disabled="disabled">
                 <label  for="group_784736844_3" class="option-label">Visa</label></td>
               </tr>
               <tr>
                 <td class="creditcards2"><label  for="entry_1581971633">Number</label>
                 <input type="text" name="entry.1581971633"
-                    value="" class="creditcardname1 input-xxlarge"
+                    value="" class="creditcardname1 credit-option"
                     id="entry_1581971633"
                     dir="auto" aria-label="Number  "
                     aria-required="true"
-                    required="" title="">
+                    required="" title="" disabled="disabled">
                 </td>
               </tr>
               <tr>
                 <td class="creditcards2"><label  for="entry_1692592575">Card Holder Name</label>
                    <input type="text" name="entry.1692592575"
-                    value="" class="creditcardname2 input-xxlarge"
+                    value="" class="creditcardname2 credit-option"
                     id="entry_1692592575"
                     dir="auto" aria-label="Card Holder Name  "
                     aria-required="true"
-                    required="" title="">
+                    required="" title="" disabled="disabled">
                 </td>
               </tr>
               <tr>
                 <td class="creditcards2"><label  for="entry_1041913969">Expiration Date</label>
                   <input type="text" name="entry.1041913969"
-                    value="" class="creditcardname3 input-xxlarge"
+                    value="" class="creditcardname3 credit-option"
                     id="entry_1041913969"
                     dir="auto" aria-label="Expiration Date  "
                     aria-required="true"
-                    required="" title="">
+                    required="" title="" disabled="disabled">
                 </td>
               </tr>
             </table>
@@ -570,6 +570,13 @@
 					$("#form-submit").prop('disabled', true);
         }
       });
+      $("input[name='entry.166141118']").change(function(){
+        
+        $('.other-option').prop('disabled', !$('#group_166141118_3')[0].checked);
+      }); //other option
+      $("input[name='entry.585576449']").change(function(){
+        $('.credit-option').prop('disabled', !$("#group_585576449_2")[0].checked);
+      }); // credit card option
     </script>
   </body>
 </html>
