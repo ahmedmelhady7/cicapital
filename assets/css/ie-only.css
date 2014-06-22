@@ -209,13 +209,3 @@ input[type=submit], input[type=button], button {
     font-weight: 500;
     margin-top: 20px;
 }
-.fnametd {
-	width: 10%;
-}
-.citytd {
-	width: 30%;
-}
-
-.mobiletd {
-	width: 30%;
-}

@@ -7,7 +7,12 @@
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/bootstrap-theme.css">
 		<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="assets/css/style.css">
+		<!--[if !IE]><!-->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<!--<![endif]-->
+		<!--[if IE]><!-->
+		<link rel="stylesheet" type="text/css" href="assets/css/ie-only.css" />
+		<!--<![endif]-->
 		<script type="text/javascript">
 			/**
 			 * @license
@@ -166,9 +171,9 @@
 					<tr>
 						<td width="77%"><h1>Investor Registeration Form</h1></td>
 						<td>
-							<br />
-							<label>Date:</label>
-							<input type="text" name="date" value="" id="date"/>
+						<br />
+						<label>Date:</label>
+						<input type="text" name="date" value="" id="date"/>
 						</td>
 					</tr>
 				</table>
@@ -191,7 +196,7 @@
 								</div></td>
 							</tr>
 							<tr>
-								<td width="10%"><!-- Text input-->
+								<td class="fnametd"><!-- Text input-->
 								<div class="control-group">
 									<label class="control-label"  for="">First Name *:</label>
 									<div class="inputText controls">
@@ -260,7 +265,7 @@
 										</div>
 									</div>
 								</div></td>
-								<td width="30%" colspan="2"><!-- Text input-->
+								<td class="citytd" colspan="2"><!-- Text input-->
 								<div class="control-group">
 									<label class="control-label"  for="">City *:</label>
 									<div class="inputText controls">
@@ -295,7 +300,7 @@
 										</div>
 									</div>
 								</div></td>
-								<td width="30%" colspan="2"><!-- Text input-->
+								<td class="mobiletd" colspan="2"><!-- Text input-->
 								<div class="control-group">
 									<label class="control-label"  for="">*Mobile :</label>
 									<div class="inputText controls">
