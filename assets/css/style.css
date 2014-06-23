@@ -147,9 +147,10 @@ th, td {
 }
 .flight1 {
 	margin-left:20px;
+	width:160px;
 }
 .flight2 {
-	margin-left:6px;
+	width: 160px;
 }
 .pay th, td {
 	padding-top: 5px !important;
