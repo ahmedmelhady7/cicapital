@@ -166,7 +166,7 @@
 					var submitted = false;
 				</script>
 				<!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://YOUR-THANK-YOU-PAGE-URL';}"></iframe> -->
-				<form action="https://docs.google.com/forms/d/1sr4EuA-KD9OCkkqOjZfZYY19BU6h7IrqaRhdyE7e_QY/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+				<form action="https://docs.google.com/forms/d/1w7uwQBNO1NxF3c-2Ix2FU-4LkseWtRy79-ailbKXvsw/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
 					<fieldset>
 						<table class="table-input" style="width:100%">
 							<tr>
@@ -459,7 +459,7 @@
 						<table class="grayTable">
 							<tr>
 								<td>
-									<h2 class="section-title"><b>Special Requests / Comments</b></h2>
+									<label for="entry_1352589362"><h2 class="section-title"><b>Special Requests / Comments:</b></h2></label>
 								</td>
 							</tr>
 							<tr>
@@ -513,7 +513,7 @@
 				},
 				submitHandler : function(form) {
 					$("#form-submit").prop('disabled', true);
-					//form.submit();
+					form.submit();
 				}
 			});
 			$("input[name='entry.166141118']").change(function() {
@@ -532,8 +532,10 @@
 					$('.credit-option').removeClass('error-element').removeClass('error-label');
 				}
 			});
+			// $("input[name='entry.1764085803']").change(function(){
+			// 	$("input[name='entry.1764085803']").(":checked")
+			// });
 			// credit card option
-
 			$("input[name='entry.317062195']").change(function() {
 				var isChecked = $("#group_317062195_3")[0].checked;
 				var isCreditChecked = $("#group_585576449_2")[0].checked;
