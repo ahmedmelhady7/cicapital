@@ -266,3 +266,6 @@ input[type=submit], input[type=button], button {
 .slogan p, .slogan h1 {
 	padding-left:10px;
 }
+.no-left-padding {
+	padding-left:0;
+}

@@ -319,16 +319,19 @@
 								<td width="30%">
 								<input type="radio" name="entry.317062195" value="Luxury King Room: $290 per night" id="group_317062195_1" role="radio" class="ss-q-radio" aria-label="Luxury Twin Bed: $550 per night" required aria-required="true" >
 								<label  for="group_317062195_1" class="option-label">Luxury King Room: $290 per night</label></td>
-								<td>
+								<td width="30%">
 								<input type="radio" name="entry.317062195" value="Luxury Twin Room: $290 per night" id="group_317062195_2" role="radio" class="ss-q-radio" aria-label="Luxury King Room: $520 per night" required aria-required="true">
 								<label for="group_317062195_2" class="option-label">Luxury Twin Room: $290 per night</label></td>
+								<td>
+								<input type="radio" name="entry.317062195" value="None" id="group_317062195_3" role="radio" class="ss-q-radio" aria-label="None" required aria-required="true">
+								<label for="group_317062195_3" class="option-label">None</label></td>
 							</tr>
 							<tr>
 								<td width="30%"><label  for="entry_826239092">Check in on: </label>
-								<input type="date" name="entry.826239092" value="" class="ss-q-date required" dir="auto" id="entry_826239092" aria-label="Check in on  " aria-required="true" required="">
+								<input type="date" name="entry.826239092" value="" class="ss-q-date required accommodation-data" dir="auto" id="entry_826239092" aria-label="Check in on  " aria-required="true" required=""  disabled="disabled" placeholder="mm/dd/yyyy">
 								</td>
 								<td><label  for="entry_223451460">Check out on: </label>
-								<input type="date" name="entry.223451460" value="" class="ss-q-date required" dir="auto" id="entry_223451460" aria-label="Check out on  " aria-required="true" required="">
+								<input type="date" name="entry.223451460" value="" class="ss-q-date required accommodation-data" dir="auto" id="entry_223451460" aria-label="Check out on  " aria-required="true" required=""  disabled="disabled" placeholder="mm/dd/yyyy">
 								</td>
 							</tr>
 							<tr>
@@ -337,11 +340,11 @@
 								Availability will be on first-come-first-serve basis </td>
 							</tr>
 							<tr>
-								<td colspan="2"><label  for="entry_1868665272">Number of occupants per room: </label>
-								<input type="number" name="entry.1868665272" value="" class="input-small" id="entry_1868665272" dir="auto" aria-label="Number of occupants per room  Must be a number greater than 0" aria-required="true" required step="any" title="Must be a number greater than 0">
-								<input type="radio" name="entry.1386580674" value="smoking" id="group_1386580674_1" role="radio" class="smoke" aria-label="smoking" required="" aria-required="true">
+								<td colspan="3"><label  for="entry_1868665272">Number of occupants per room: </label>
+								<input type="number" name="entry.1868665272" value="" class="input-small accommodation-data" id="entry_1868665272" dir="auto" aria-label="Number of occupants per room  Must be a number greater than 0" aria-required="true" required step="any" title="Must be a number greater than 0"  disabled="disabled">
+								<input type="radio" name="entry.1386580674" value="smoking" id="group_1386580674_1" role="radio" class="smoke accommodation-data" aria-label="smoking" required="" aria-required="true"  disabled="disabled">
 								<label  for="group_1386580674_1" class="option-label">Smoking</label>
-								<input type="radio" name="entry.1386580674" value="non smoking" id="group_1386580674_2" role="radio" class="smoke" aria-label="non smoking" required="" aria-required="true">
+								<input type="radio" name="entry.1386580674" value="non smoking" id="group_1386580674_2" role="radio" class="smoke accommodation-data" aria-label="non smoking" required="" aria-required="true"  disabled="disabled">
 								<label  for="group_1386580674_2" class="option-label">Non-smoking</label></td>
 							</tr><!--
 							<tr>
@@ -363,16 +366,16 @@
 						<table class="grayTable pay">
 							<tr>
 								<td width="60%"><label  for="">Payment Method: </label>
-								<input type="radio" name="entry.585576449" value="Cash" id="group_585576449_1" role="radio" class="payment" aria-label="Cash" required aria-required="true">
+								<input type="radio" name="entry.585576449" value="Cash" id="group_585576449_1" role="radio" class="payment accommodation-data" aria-label="Cash" required aria-required="true"  disabled="disabled">
 								<label  for="group_585576449_1" class="option-label">Cash</label>
-								<input type="radio" name="entry.585576449" value="Credit Card" id="group_585576449_2" role="radio" class="creditcard" aria-label="Credit Card" required aria-required="true">
+								<input type="radio" name="entry.585576449" value="Credit Card" id="group_585576449_2" role="radio" class="creditcard accommodation-data" aria-label="Credit Card" required aria-required="true"  disabled="disabled">
 								<label  for="group_585576449_2" class="option-label">Credit Card</label></td>
 							</tr>
 							<tr>
 								<td class="creditcards2"><label  for="">Type</label>
-								<input type="radio" name="entry.784736844" value="Amex" id="group_784736844_1" role="radio" class="creditcards credit-option" aria-label="Amex" required aria-required="true" disabled="disabled">
+								<input type="radio" name="entry.784736844" value="Amex" id="group_784736844_1" role="radio" class="creditcards credit-option " aria-label="Amex" required aria-required="true" disabled="disabled">
 								<label  for="group_784736844_1" class="option-label credit-option">Amex</label>
-								<input type="radio" name="entry.784736844" value="Master Card" id="group_784736844_2" role="radio" class="creditcards credit-option" aria-label="Master Card" required aria-required="true" disabled="disabled">
+								<input type="radio" name="entry.784736844" value="Master Card" id="group_784736844_2" role="radio" class="creditcards credit-option " aria-label="Master Card" required aria-required="true" disabled="disabled">
 								<label  for="group_784736844_2" class="option-label credit-option">Master Card</label>
 								<input type="radio" name="entry.784736844" value="Visa" id="group_784736844_3" role="radio" class="creditcards credit-option" aria-label="Visa" required aria-required="true" disabled="disabled">
 								<label  for="group_784736844_3" class="option-label credit-option">Visa</label></td>
@@ -380,7 +383,7 @@
 							<tr>
 								<td class="creditcards2"><label  for="entry_1581971633">Number</label>
 								<input type="text" name="entry.1581971633"
-								value="" class="creditcardname1 credit-option"
+								value="" class="creditcardname1 credit-option "
 								id="entry_1581971633"
 								dir="auto" aria-label="Number  "
 								aria-required="true"
@@ -390,7 +393,7 @@
 							<tr>
 								<td class="creditcards2"><label  for="entry_1692592575">Card Holder Name</label>
 								<input type="text" name="entry.1692592575"
-								value="" class="creditcardname2 credit-option"
+								value="" class="creditcardname2 credit-option "
 								id="entry_1692592575"
 								dir="auto" aria-label="Card Holder Name  "
 								aria-required="true"
@@ -400,7 +403,7 @@
 							<tr>
 								<td class="creditcards2"><label  for="entry_1041913969">Expiration Date</label>
 								<input type="text" name="entry.1041913969"
-								value="" class="creditcardname3 credit-option"
+								value="" class="creditcardname3 credit-option "
 								id="entry_1041913969"
 								dir="auto" aria-label="Expiration Date  "
 								aria-required="true"
@@ -414,12 +417,12 @@
 								<td colspan="8"><h2 class="section-title"><b>Transportation Requirements:</b></h2></td>
 							</tr>
 							<tr>
-								<td><label  for="group_1764085803_1" class="option-label"><b style="font-size: 15px">Please handle my transportation booking:</b></label>
+								<td><label  for="" class="option-label"><b style="font-size: 15px">Please handle my transportation booking:</b></label>
 								<br />
-								<input type="checkbox" name="entry.1764085803" value="Airport pick-up" id="" role="checkbox" class="ss-q-checkbox">
+								<input type="checkbox" name="entry.1764085803" value="Airport pick-up" id="group_1764085803_1" role="checkbox" class="ss-q-checkbox">
 								<label  for="group_1764085803_1" class="option-label">Airport pick-up</label>
-								<input type="checkbox" name="entry.1764085803" value="Airport drop-off" id="" role="checkbox" class="transportcheck ss-q-checkbox">
-								<label  for="group_1764085803_1" class="option-label">Airport drop-off</label></td>
+								<input type="checkbox" name="entry.1764085803" value="Airport drop-off" id="group_1764085803_2" role="checkbox" class="transportcheck ss-q-checkbox">
+								<label  for="group_1764085803_2" class="option-label">Airport drop-off</label></td>
 							</tr>
 							<tr>
 								<td class="note" style=""> * Please email your flight details to egyptconferencec@caicapital.com.eg </td>
@@ -431,27 +434,16 @@
 								<td colspan="8"><h2 class="section-title"><b>Flight Details:</b></h2></td>
 							</tr>
 							<tr>
-								<td>
-									<label  for="">Flight Name</label>
-									<input type="text" name="" value="" class="flight1" id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<label  for="">Flight Number</label>&nbsp;&nbsp;
-									<input type="text" name="" value="" class="flight2" id="">
-									<br /><br />
-									<label  for="">Arrival Date</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								  	<input type="date" name="" value="" class="ss-q-date required" dir="auto" id="" aria-label="Arrival Date" aria-required="true" required="">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<label  for="">Departure Date</label>&nbsp;&nbsp;
-									<input type="date" name="" value="" class="ss-q-date required" dir="auto" id="" aria-label="Departure Date" aria-required="true" required="">
-									<br /><br />
-									<label  for="">Arrival Time</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								  	<input type="time" name="" value="" class="time1 ss-q-date required" dir="auto" id="">
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<label  for="">Departure Time</label>&nbsp;&nbsp;
-									<input type="time" name="" value="" class="time1 ss-q-date required" dir="auto" id="">
-									<br /><br />
-									<input type="checkbox" name="" value="TBC" id="" role="checkbox" class="ss-q-checkbox">
-									<label  for="" class="option-label">TBC</label>
-								</td>
+								<td><label  for="entry_1664199104">Flight Name: </label> </td>
+								<td class="no-left-padding"><input type="text" name="entry.1664199104" value="" class="ss-q-short valid" id="entry_1664199104" dir="auto" aria-label="Flight Name  " title=""></td>
+								<td><label  for="entry_343355002">Flight Number: </label></td>
+								<td class="no-left-padding"><input type="text" name="entry.343355002" value="" class="ss-q-short valid" id="entry_343355002" dir="auto" aria-label="Flight Number  " title=""></td>
+							</tr>
+							<tr>
+								<td><label  for="entry_1668115892">Arrival Date-Time: </label></td>
+							  <td class="no-left-padding"><input type="datetime-local" name="entry.1668115892" value="" class="ss-q-datetime valid" dir="auto" id="entry_1668115892" aria-label="Arrival Date-Time" placeholder="mm/dd/yyyy hh:mm AM/PM"></td>
+								<td><label  for="entry_1976496289">Departure Date-Time: </label></td>
+								<td class="no-left-padding"><input type="datetime-local" name="entry.1976496289" value="" class="ss-q-datetime valid" dir="auto" id="entry_1976496289" aria-label="Departure Date-Time  " placeholder="mm/dd/yyyy hh:mm AM/PM"></td>
 							</tr>
 						</table>
 						<br />
@@ -613,6 +605,13 @@
 				}
 			});
 			// credit card option
+
+			$("input[name='entry.317062195']").change(function(){
+				var isChecked = $("#group_317062195_3")[0].checked;
+				var isCreditChecked = $("#group_585576449_2")[0].checked;
+				$('.accommodation-data').prop('disabled', isChecked);
+				$('.credit-option').prop('disabled', (isChecked || !isCreditChecked));
+			}); // room option
 		</script>
 	</body>
 </html>
