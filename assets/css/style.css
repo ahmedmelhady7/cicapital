@@ -128,7 +128,7 @@ th, td {
 	margin-left: 80px !important;
 }
 .oneonone {
-	margin-left: 40px !important;
+	/*margin-left: 40px !important;*/
 }
 .normal {
 	margin-left: 80px !important;
@@ -177,7 +177,7 @@ th, td {
 	color: #0854a2;
 	border-collapse: collapse;
 	border: 0px solid black;
-	width: 960px;
+	width: 100%;
 	padding: 20px;
 }
 
@@ -268,4 +268,11 @@ input[type=submit], input[type=button], button {
 }
 .no-left-padding {
 	padding-left:0;
+}
+.meeting-type {
+	margin-right: -60px;
+}
+
+.meeting-priority {
+	margin-right: -40px;
 }
