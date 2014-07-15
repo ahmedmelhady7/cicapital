@@ -276,3 +276,10 @@ input[type=submit], input[type=button], button {
 .meeting-priority {
 	margin-right: -40px;
 }
+.meeting-comment {
+	margin-left: -10px;
+}
+.meeting-comment .form-control {
+	padding: 6px 6px;
+	width: auto;
+}
