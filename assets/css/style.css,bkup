@@ -31,9 +31,8 @@ input {
 .logo {
 	background-image: url('../img/logo.png');
 	background-repeat: no-repeat;
-	width: 25%;
+	width: 30%;
 	height: 120px;
-	margin-right:10px;
 }
 
 .slogan p {
@@ -129,7 +128,7 @@ th, td {
 	margin-left: 80px !important;
 }
 .oneonone {
-	/*margin-left: 40px !important;*/
+	margin-left: 40px !important;
 }
 .normal {
 	margin-left: 80px !important;
@@ -178,7 +177,7 @@ th, td {
 	color: #0854a2;
 	border-collapse: collapse;
 	border: 0px solid black;
-	width: 100%;
+	width: 960px;
 	padding: 20px;
 }
 
@@ -269,41 +268,4 @@ input[type=submit], input[type=button], button {
 }
 .no-left-padding {
 	padding-left:0;
-}
-.meeting-type {
-	margin-right: -60px;
-}
-
-.meeting-priority {
-	margin-right: -40px;
-}
-.meeting-comment {
-	margin-left: -10px;
-}
-.meeting-comment .form-control {
-	padding: 6px 6px;
-	width: auto;
-	background-color: #E6EAF2;
-}
-.bottom-20 {
-	margin-bottom:20px;
-}
-.bottom-40 {
-	margin-bottom:40px;
-}
-.top-20 {
-	margin-top:20px;
-}
-.top-40 {
-	margin-top:40px;
-}
-.company-name {
-	font-size: 15px;
-	/*font-weight: 600;*/
-}
-.company-row {
-	margin-bottom: 15px;
-}
-.panel-body .company-row {
-	margin-bottom: 30px;
 }
