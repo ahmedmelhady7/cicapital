@@ -296,7 +296,7 @@ input[type=submit], input[type=button], button {
 	margin-top:40px;
 }
 .company-name {
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: normal;
 	/*font-weight: 600;*/
 }
@@ -308,7 +308,7 @@ input[type=submit], input[type=button], button {
 }
 .category-name {
 	font-size: 20px;
-	width: 27%;
+	width: 30%;
 }
 .companies-list td {
 	padding-bottom: 20px!important;
@@ -317,6 +317,13 @@ input[type=submit], input[type=button], button {
 	padding-bottom: 5px!important;
 }
 td.comments textarea {
-	width:80%;
+	width:90%;
 	height:110%;
+/*	width: 120%;
+	height: 80px;
+	margin-left: -30%;
+*/}
+
+td.meeting-type-header, td.meeting-priority-header, td.comments-header {
+	font-size: 15px;
 }
