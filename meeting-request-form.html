@@ -739,7 +739,7 @@
 									<div class="controls">
 										<label class="checkbox inline company-name" for="checkboxes-14">
 											<input type="checkbox" name="checkboxes" id="checkboxes-14" value="1">
-											Global Telecom Holding (TBC)</label>
+											Global Telecom Holding</label>
 									</div>
 								</div></td>
 								<!--<td><label for="">Meeting Type</label></td>-->
@@ -956,7 +956,7 @@
 								<td><!-- Multiple Checkboxes (inline) -->
 									<label class="checkbox inline company-name" for="checkboxes-22">
 										<input type="checkbox" name="checkboxes" id="checkboxes-22" value="1">
-										Ankur Khetawat, CFA</label>
+										Ankur Khetawat</label>
 										<div></div>
 										<label class="extra-info note">Sector Head - Financials and Real Estate</label>
 								</td>
@@ -1230,39 +1230,37 @@
 		<script src="assets/js/jquery.form.min.js"></script>
 		<script src="assets/js/jquery.validate.min.js"></script>
 		<script>
-			$("#ss-form").validate({
-				errorClass : "error-element",
-				errorPlacement : function(error, element) {
-					if (element.prop('type') == 'radio' || element.prop('type') == 'checkbox') {
-						var siblings = element.siblings();
-						siblings.addClass('error-label');
-						if (siblings.length > 1) {
-							$(siblings[0]).removeClass('error-label');
-						}
-					}
-				},
-				success : function(label, element) {
-					element = $(element)
-					if (element.prop('type') == 'radio' || element.prop('type') == 'checkbox') {
-						var siblings = element.siblings();
-						siblings.removeClass('error-label');
-					}
-				},
-				submitHandler : function(form) {
-					$("#form-submit").prop('disabled', true);
-					form.submit();
-				}
-			});
-			// $("input[name='entry.166141118']").change(function() {
-			// 	var isChecked = $('#group_166141118_3')[0].checked
-			// 	$('.other-option').prop('disabled', !isChecked);
-			// 	if (!isChecked) {
-			// 		$('.other-option').removeClass('error-element');
-			// 	}
-			// });
-			//other option
-			$("#form-submit").click(function(e){
-			}); // form-submit click handler
+      $("#ss-form").validate({
+        errorClass : "error-element",
+        errorPlacement : function(error, element) {
+          if (element.prop('type') == 'radio' || element.prop('type') == 'checkbox') {
+            var parent = element.parent();
+            parent.addClass('error-label');
+            parent.removeClass('error-label');
+          }
+        },
+        success : function(label, element) {
+          element = $(element)
+          if (element.prop('type') == 'radio' || element.prop('type') == 'checkbox') {
+            var parent = element.parent();
+            parent.removeClass('error-label');
+          }
+        },
+        submitHandler : function(form) {
+          $("#form-submit").prop('disabled', true);
+          form.submit();
+        }
+      });
+      // $("input[name='entry.166141118']").change(function() {
+      //  var isChecked = $('#group_166141118_3')[0].checked
+      //  $('.other-option').prop('disabled', !isChecked);
+      //  if (!isChecked) {
+      //    $('.other-option').removeClass('error-element');
+      //  }
+      // });
+      //other option
+      $("#form-submit").click(function(e){
+      }); // form-submit click handler
 		</script>
 	</body>
 </html>
