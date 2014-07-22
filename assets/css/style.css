@@ -62,6 +62,7 @@ input {
 	font-size: 12px !important;
 	margin-top: 100px;
 	margin-bottom: 0px;
+	width:100%;
 }
 
 .lname {
@@ -247,6 +248,7 @@ input[type=submit], input[type=button], button {
 	font-style: italic;
 	padding-bottom: 10px;
 	font-size: 12px;
+	font-weight:normal;
 }
 .section-title {
 	margin-top: 10px;
@@ -267,16 +269,6 @@ input[type=submit], input[type=button], button {
 }
 .no-left-padding {
 	padding-left:0;
-}
-.meeting-type {
-	margin-right: -60px;
-}
-
-.meeting-priority {
-	margin-right: -40px;
-}
-.meeting-comment {
-	margin-left: -10px;
 }
 .meeting-comment .form-control {
 	padding: 6px 6px;
@@ -306,24 +298,62 @@ input[type=submit], input[type=button], button {
 .panel-body .company-row {
 	margin-bottom: 30px;
 }
-.category-name {
-	font-size: 20px;
-	width: 30%;
-}
-.companies-list td {
-	padding-bottom: 20px!important;
+.companies-list td.category-name-header, .analysts-list td.category-name-header {
+	width: 35%;
 }
 .companies-list td.category-name {
-	padding-bottom: 5px!important;
+	font-size: 17px;
+	padding-bottom: 5px;
 }
-td.comments textarea {
+.companies-list td, .analysts-list td {
+	padding-bottom: 20px!important;
+}
+td.meeting-type-header,
+td.meeting-priority-header,
+td.comments-header, 
+td.category-name-header {
+	padding-bottom: 5px!important;
+	font-size:20px;
+}
+
+.companies-list td.comments textarea {
 	width:90%;
 	height:110%;
 /*	width: 120%;
 	height: 80px;
 	margin-left: -30%;
 */}
+.analysts-list td.comments textarea {
+	width:90%;
+	height:90%;
+/*	width: 120%;
+	height: 80px;
+	margin-left: -30%;
+*/}
 
-td.meeting-type-header, td.meeting-priority-header, td.comments-header {
-	font-size: 15px;
+.analysts-list td.meeting-type-header, .analysts-list td.meeting-priority-header, .analysts-list td.comments-header {
+
+}
+.lname-row  input, .fname-row input, .company-row  input {
+	width:300px;
+}
+
+
+.lname-row>td:first-child, .company-row>td:first-child, .fname-row>td:first-child{
+	width:15%;
+}
+.contacts .header-row td {
+	padding-top: 0px!important;
+	padding-bottom: 0px!important;
+}
+label.extra-info {
+	margin-top: 3px;
+	font-style: normal;
+}
+.analysts-list tr td .small-group, .analysts-list  tr td .low-priority {
+	margin-bottom:8px;
+}
+
+.analysts-list tr td .small-group.special, .analysts-list  tr td .low-priority.special {
+	margin-bottom:18px;
 }
